@@ -9,4 +9,4 @@ Basic things to note :
    to gem
 3. to run sass to produce css sheet (autocompile) go to the folder where sass sheet is stored.
    then type : "sass --watch fileName.sass:fileName.css"
-4. to stop autocompile (windows os) press ctrl+c
+4. to stop autocompile (windows os) press ctrl+c.
