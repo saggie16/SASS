@@ -5,7 +5,7 @@ $brand-dark:      #333
 $brand-light:     #E6F2FF
 
 //MIXINS
-=shaping($height, $width, $rad, $bg, $color)  
+=shaping($height, $width, $rad, $bg, $color)
   height:                 $height
   width:                  $width
   -webkit-border-radius:  $rad
@@ -14,6 +14,20 @@ $brand-light:     #E6F2FF
   border-radius:          $rad
   background-color:       $bg
   color:                  $color
+
+=btn-main($padding, $rad, $bg, $color)
+  padding:                 $padding
+  border-radius:           $rad
+  background-color:        $bg
+  color:                   $color
+  border-width:            0
+  border-style:            none
+  cursor:                  pointer
+  display:                 block
+  margin:                  auto
+  &:hover
+    background-color: lighten($brand-main, 20%)
+
 
 //STYLES
 body
@@ -30,6 +44,22 @@ section
   margin: auto
   padding: 20px
   border-radius: 7px
+  position: relative
+  z-index: -2         //to make "what's" up come in front of the div of "can you read this"
 
 .thumb1
   +shaping(120px, 120px, 10%, $brand-dark, $brand-light)
+  margin: 0% 11.25% -7%       //to move the "what's up" close to the div (previously 0px 150px -90px)
+
+.thumb2
+  +shaping(100px, 100px, 50%, $brand-sub, $brand-sub)
+  margin: -50px 77%
+
+.btn-1
+  +btn-main(15px 20px, 7px, $brand-main, white)
+
+.btn-2
+  +btn-main(30px, 50%, $brand-dark, white)
+  font-size: 2rem
+  &:hover
+  background-color: darken($brand-dark, 10%)
