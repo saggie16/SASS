@@ -1,0 +1,35 @@
+//VARIABLES
+$brand-main:      #6600CC
+$brand-sub:       #CC66FF
+$brand-dark:      #333
+$brand-light:     #E6F2FF
+
+//MIXINS
+=shaping($height, $width, $rad, $bg, $color)  
+  height:                 $height
+  width:                  $width
+  -webkit-border-radius:  $rad
+  -moz-border-radius:     $rad
+  -ms-border-radius:      $rad
+  border-radius:          $rad
+  background-color:       $bg
+  color:                  $color
+
+//STYLES
+body
+  background-color: $brand-light
+
+h1
+  text-align: center
+  padding-top: 20px
+
+section
+  background-color: $brand-sub
+  color: $brand-dark
+  width: 780px
+  margin: auto
+  padding: 20px
+  border-radius: 7px
+
+.thumb1
+  +shaping(120px, 120px, 10%, $brand-dark, $brand-light)
